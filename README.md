@@ -18,8 +18,11 @@ Live Preview link can be found [here] (https://www.espiritukarl.github.io/odin-c
 - ~~All the operators working~~
 - ~~Clear~~
 - ~~Display showing up~~
+- ~~Decimal point~~
+
+## REVISIT IN THE FUTURE:
 - PEMDAS
-- Decimal point
+- Explore using Display as input
 
 ## Screenshot of Project Etch a Sketch
 <!-- ![Screenshot](https://github.com/espiritukarl/odin-etch-a-sketch/blob/main/ksnip_20220214-165556.png) -->
