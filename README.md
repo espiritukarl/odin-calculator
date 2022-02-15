@@ -13,12 +13,13 @@ Live Preview link can be found [here] (https://www.espiritukarl.github.io/odin-c
 - Arrays & Objects
   
 ## TO-DO:  
-- HTML
-- Calculator CSS
-- All the operators working
-- Clear
-- Display showing up
+- ~~HTML~~
+- ~~Calculator CSS~~
+- ~~All the operators working~~
+- ~~Clear~~
+- ~~Display showing up~~
 - PEMDAS
+- Decimal point
 
 ## Screenshot of Project Etch a Sketch
 <!-- ![Screenshot](https://github.com/espiritukarl/odin-etch-a-sketch/blob/main/ksnip_20220214-165556.png) -->
