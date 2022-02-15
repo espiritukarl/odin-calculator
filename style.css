@@ -17,7 +17,7 @@
 }
 
 .calculator__container {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Balsamiq Sans', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,10 +70,29 @@ h1 {
     grid-row: 1;
     background-color: bisque;
     border: solid 1px black;
-    padding: 60px;
+    padding: 0;
     margin-bottom: 10px;
     border-radius: 4%;
     box-shadow: 2px 2px #004f7c;
+    height: 142px;
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.past-results {
+    text-align: end;
+    padding: 10px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    color: gray;
+}
+
+.current-results {
+    text-align: end;
+    padding: 10px;
+    font-size: 36px;
 }
 
 .number {
@@ -90,7 +109,7 @@ h1 {
 }
 
 .equal {
-    background-color: #73c902;
+    background-color: #30c902;
     color: white;
 }
 

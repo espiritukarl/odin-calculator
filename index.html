@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
 
@@ -45,7 +45,10 @@
                     <button class="column-3 operator">%</button>
                     <button class="column-4 operator">&divide</button>
                 </div>
-                <div class="calculator__display rows"></div>
+                <div class="calculator__display rows">
+                    <div class="past-results"></div>
+                    <div class="current-results">0</div>
+                </div>
             </div>
         </div>
         <div class="footer">
