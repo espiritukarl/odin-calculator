@@ -13,7 +13,18 @@ buttons.forEach(button => {
         if (Number(buttonClicked) || buttonClicked === "0") {
             number = `${number}${buttonClicked}`
             displayCurrent.textContent = number;
-        } else {
+        }
+
+        else if (total == "TO INFINITY AND BEYOND") {
+            displayPast.textContent = '';
+            displayCurrent.textContent = "TO INFINITY AND BEYOND";
+            number = '';
+            numbers = [];
+            total = 0;
+            operand = '';
+        }
+
+        else {
             if (buttonClicked === 'c') {
                 displayPast.textContent = '';
                 displayCurrent.textContent = 0;
@@ -21,9 +32,10 @@ buttons.forEach(button => {
                 numbers = [];
                 total = 0;
                 operand = '';
-            } else if (buttonClicked === '+') {
+            }
+
+            else if (buttonClicked === '+') {
                 numbers.push(Number(number));
-                console.log(numbers);
                 if (operand == '') {
                     numbers.push(0);
                 } else if (operand == '~') {
@@ -31,6 +43,7 @@ buttons.forEach(button => {
                     operand = '+';
                 }
                 total = operator(operand, numbers, number);
+                displayPast.textContent = number;
                 displayCurrent.textContent = total;
                 number = '';
                 numbers[0] = Number(total);
@@ -48,6 +61,7 @@ buttons.forEach(button => {
                     operand = '-';
                 }
                 total = operator(operand, numbers, number);
+                displayPast.textContent = number;
                 displayCurrent.textContent = total;
                 number = '';
                 numbers[0] = Number(total);
@@ -64,6 +78,7 @@ buttons.forEach(button => {
                     operand = 'x';
                 }
                 total = operator(operand, numbers, number);
+                displayPast.textContent = number;
                 displayCurrent.textContent = total;
                 number = '';
                 numbers[0] = Number(total);
@@ -80,7 +95,16 @@ buttons.forEach(button => {
                     operand = '÷';
                 }
                 total = operator(operand, numbers, number);
+                displayPast.textContent = number;
                 displayCurrent.textContent = total;
+                if (total == "TO INFINITY AND BEYOND") {
+                    displayPast.textContent = '';
+                    displayCurrent.textContent = "TO INFINITY AND BEYOND";
+                    number = '';
+                    numbers = [];
+                    total = 0;
+                    operand = '';
+                }
                 number = '';
                 numbers[0] = Number(total);
                 numbers.pop()
@@ -88,8 +112,7 @@ buttons.forEach(button => {
             }
 
             else if (buttonClicked === '%') {
-                if (operand == "%") numbers.push(Number(number));
-                else numbers.push(Number(total));
+                numbers.push(Number(number));
                 total = percent(numbers[0]);
                 displayPast.textContent = `${number}%`
                 displayCurrent.textContent = total;
@@ -98,8 +121,7 @@ buttons.forEach(button => {
             }
 
             else if (buttonClicked === '!') {
-                if (operand == "!") numbers.push(Number(number));
-                else numbers.push(Number(total));
+                numbers.push(Number(number));
                 total = factorial(numbers[0]);
                 displayPast.textContent = `${number}!`
                 displayCurrent.textContent = total;
@@ -111,42 +133,71 @@ buttons.forEach(button => {
                 if (operand == '~') number = total;
                 numbers.push(Number(number));
                 total = operator(operand, numbers, number);
+                console.log(total);
+                if (total == "TO INFINITY AND BEYOND") {
+                    displayPast.textContent = '';
+                    displayCurrent.textContent = "TO INFINITY AND BEYOND";
+                    number = '';
+                    numbers = [];
+                    total = 0;
+                    operand = '';
+                }
+                displayPast.textContent = number;
                 displayCurrent.textContent = total;
                 operand = '~';
                 if (numbers.length != 1) number = '';
                 else numbers.push(number);
                 numbers[0] = Number(total);
                 numbers.pop();
-            } else {
 
+            }
+
+            else if (buttonClicked === '+/-') {
+                number = `-${number}`;
+                displayCurrent.textContent = number;
+            }
+
+            else if (buttonClicked === '.') {
+                if (number.search('.')) {
+                    number = "ERROR";
+                    number = '';
+                    numbers = [];
+                    operand = '';
+                }
+                else number = `${number}.`;
+                displayCurrent.textContent = number;
             }
         }
     });
 });
 
 function addition(args) {
-    return args[0] + args[1];
+    return parseFloat((args[0] + args[1]).toFixed(5));
 }
 
 function subtraction(args) {
-    return args[0] - args[1];
+    return parseFloat((args[0] - args[1]).toFixed(5));
 }
 
 function multiplication(args) {
-    return args[0] * args[1];
+    return parseFloat((args[0] * args[1]).toFixed(5));
 }
 
 function division(args) {
-    return args[0] / args[1];
+    console.log(args[1]);
+    if (args[1] != 0) return parseFloat((args[0] / args[1]).toFixed(5));
+    else return "TO INFINITY AND BEYOND";
 }
 
 function percent(args) {
-    return args / 100;
+    return parseFloat((args / 100).toFixed(5));
 }
 
 function factorial(args) {
     if (args == 0) {
         return 1
+    } if (args == 1) {
+        return 1;
     } else if (args > 0) {
         return args * factorial(args - 1);
     } else {
