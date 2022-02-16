@@ -1,7 +1,7 @@
 # CALCULATOR
 This project is a way to put into practice what I've learned regarding HTML, CSS, and JavaScript.  
 The project link can be found [here](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator).  
-Live Preview link can be found [here] (https://www.espiritukarl.github.io/odin-calculator). **TO FOLLOW**
+Live Preview link can be found [here](https://www.espiritukarl.github.io/odin-calculator).
   
 ## What I learned throughout this project:
 - CSS Flexbox
@@ -22,8 +22,10 @@ Live Preview link can be found [here] (https://www.espiritukarl.github.io/odin-c
 
 ## REVISIT IN THE FUTURE:
 - PEMDAS
-- Explore using Display as input
+- Keyboard Input
+- Delete 1 number at a time
+- ~~Explore using Display as input~~
 
 ## Screenshot of Project Etch a Sketch
-<!-- ![Screenshot](https://github.com/espiritukarl/odin-etch-a-sketch/blob/main/ksnip_20220214-165556.png) -->
+![Screenshot](/home/karl/repos/odin-calculator/screenshot.png)
 **TO FOLLOW**
