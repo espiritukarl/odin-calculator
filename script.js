@@ -5,22 +5,22 @@ let i = 0;
 let number = '';
 let arrayNumbers = [];
 let arrayOperations = [];
+
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
     button.addEventListener('click', e => {
         let buttonClicked = (e.target.textContent).toLowerCase();
-        if (Number(buttonClicked) || buttonClicked === "0") {
-            number = `${number}${buttonClicked}`
-            displayCurrent.textContent = number;
-        }
-        else if (buttonClicked == 'c') {
+        if (displayCurrent.textContent === "YOU BROKE ME" || buttonClicked == 'c') {
             number = '';
             displayPast.textContent = '';
             displayCurrent.textContent = 0;
             arrayNumbers = [];
             arrayOperations = [];
             i = 0;
+        } else if (Number(buttonClicked) || buttonClicked === "0") {
+            number = `${number}${buttonClicked}`
+            displayCurrent.textContent = number;
         } else if (buttonClicked == '.') {
             if (!(number.search('.'))) {
                 number = `${number}.`;
@@ -63,7 +63,6 @@ buttons.forEach(button => {
                 i++;
             }
         }
-
     });
 });
 
@@ -81,7 +80,7 @@ function multiplication(number1, number2) {
 
 function division(number1, number2) {
     if (+number2 != 0) return parseFloat((+number1 / +number2).toFixed(5));
-    else return "TO INFINITY AND BEYOND";
+    else return "YOU BROKE ME";
 }
 
 function percent(args) {
@@ -99,7 +98,6 @@ function factorial(args) {
         return "Error"
     }
 }
-
 
 function operate(arrayNumbers, arrayOperations, i) {
     if (arrayOperations[i] == '+') arrayNumbers[i + 1] = addition(arrayNumbers[i], arrayNumbers[i + 1]);

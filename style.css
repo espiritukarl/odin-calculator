@@ -124,8 +124,12 @@ h1 {
 }
 
 .footer img {
-    height: 1em;
+    height: 1.3em;
     padding-left: 8px;
+}
+
+.footer img:hover {
+    transform: scale(2);
 }
 
 /* ROWS AND COLUMNS */
