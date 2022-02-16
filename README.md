@@ -27,5 +27,4 @@ Live Preview link can be found [here](https://www.espiritukarl.github.io/odin-ca
 - ~~Explore using Display as input~~
 
 ## Screenshot of Project Etch a Sketch
-![Screenshot](/home/karl/repos/odin-calculator/screenshot.png)
-**TO FOLLOW**
+![Screenshot](https://github.com/espiritukarl/odin-calculator/blob/main/screenshot.png)
