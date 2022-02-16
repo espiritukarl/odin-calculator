@@ -93,6 +93,7 @@ h1 {
     text-align: end;
     padding: 10px;
     font-size: 36px;
+    overflow-wrap: break-word;
 }
 
 .number {
