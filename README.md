@@ -19,6 +19,9 @@ Live Preview link can be found [here](https://www.espiritukarl.github.io/odin-ca
 - ~~Clear~~
 - ~~Display showing up~~
 - ~~Decimal point~~
+- Decimal not working if it is the first key pressed
+- +/- only works once
+- If no input for 2nd Number, it assumes 2nd Number = 1st Number
 
 ## REVISIT IN THE FUTURE:
 - PEMDAS
