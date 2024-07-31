@@ -1,7 +1,7 @@
 # CALCULATOR
 This project is a way to put into practice what I've learned regarding HTML, CSS, and JavaScript.  
-The project link can be found [here](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator).  
-Live Preview link can be found [here](https://www.espiritukarl.github.io/odin-calculator).
+The project link can be found [here](https://theodinproject.com/paths/foundations/courses/foundations/lessons/calculator).  
+Live Preview link can be found [here](https://espiritukarl.github.io/odin-calculator).
   
 ## What I learned throughout this project:
 - CSS Flexbox
